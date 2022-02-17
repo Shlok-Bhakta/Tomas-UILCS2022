@@ -32,7 +32,7 @@ public class App {
 
 
             }
-         System.out.println(nums);
+         
 
 
 
@@ -40,7 +40,15 @@ public class App {
 
 
         }
+        public static char[] toLetters(String inNum){
+            ArrayList<Character> letterChar = new ArrayList<Character>();
+                if(inNum.charAt(0) == '2'){
+                    letterchar
+                }
 
+
+            return letterChar.;
+        }
 
     }
 
