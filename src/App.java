@@ -3,6 +3,7 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class App {
+    
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(new File("tomas.dat"));
         int loop = scanner.nextInt();
@@ -11,7 +12,7 @@ public class App {
 
         for(int i = 0; i < loop; i++) {
             ArrayList<String> nums = new ArrayList<String>();
-            ArrayList<Character> possLet = new ArrayList<Character>();
+            
             scanner.nextLine();
             String scan = scanner.nextLine() + " ";
 
@@ -36,11 +37,41 @@ public class App {
             }
 
             for(int xx = 0; xx < nums.size(); xx++){
-                possLet.add(toLetters);
+                ArrayList<Character> possLet = new ArrayList<Character>();
+                int cursor = 1;
+                possLet = toLetters(nums.get(xx));
+                
+                    if(possLet.size() == 1){
+                        System.out.print(possLet.get(0));
 
+                    }
+                    if(possLet.size() == 3){
+                        for(int yy = 0; yy < possLet.size(); yy++){
+                            cursor = cursor + 1;
+                            if(cursor == possLet.size()){
+                                cursor = 1;
+                            }
+                            
+                            
+                        }
+                        System.out.print(possLet.get(cursor));
+                    }
+                    if(possLet.size() == 4){
+                        for(int yy = 0; yy < possLet.size(); yy++){
+                            cursor = cursor + 1;
+                            if(cursor == possLet.size()){
+                                cursor = 1;
+                            }
+                            
+                            
+                        }
+
+                        System.out.print(possLet.get(cursor));
+
+                    }
 
             }
-
+            System.out.println();
          
 
             }
