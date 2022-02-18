@@ -38,37 +38,39 @@ public class App {
 
             for(int xx = 0; xx < nums.size(); xx++){
                 ArrayList<Character> possLet = new ArrayList<Character>();
-                int cursor = 1;
+                int cursor = 0;
+                
+
                 possLet = toLetters(nums.get(xx));
                 
                     if(possLet.size() == 1){
-                        System.out.print(possLet.get(0));
+                        cursor = 0;
 
                     }
                     if(possLet.size() == 3){
-                        for(int yy = 0; yy < possLet.size(); yy++){
-                            cursor = cursor + 1;
-                            if(cursor == possLet.size()){
-                                cursor = 1;
-                            }
-                            
-                            
+                        int mod = posLet%3
+                        if(cursor == possLet.size()){
+                            cursor = 0;
                         }
-                        System.out.print(possLet.get(cursor));
+                            cursor = cursor + 1;
+
+
                     }
                     if(possLet.size() == 4){
-                        for(int yy = 0; yy < possLet.size(); yy++){
-                            cursor = cursor + 1;
-                            if(cursor == possLet.size()){
-                                cursor = 1;
-                            }
-                            
-                            
+                        
+                        if(cursor == 4){
+                            cursor = 0;
                         }
+                            cursor = cursor + 1;
 
-                        System.out.print(possLet.get(cursor));
+                            
+                            
+                        
+
+                        
 
                     }
+                    System.out.print(possLet.get(cursor));
 
             }
             System.out.println();
