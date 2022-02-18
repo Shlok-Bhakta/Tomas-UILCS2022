@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class App {
     
     public static void main(String[] args) throws Exception {
-        Scanner scanner = new Scanner(new File("tomas.dat"));
+        Scanner scanner = new Scanner(new File("tomasJUD.dat"));
         int loop = scanner.nextInt();
         scanner.nextLine();
         String temp = "";
@@ -48,20 +48,38 @@ public class App {
 
                     }
                     if(possLet.size() == 3){
-                        int mod = posLet%3
-                        if(cursor == possLet.size()){
-                            cursor = 0;
+                        int mod = (nums.get(xx).length() % 3);
+                        if(mod == 0){
+                            cursor = 2;
+                            
                         }
-                            cursor = cursor + 1;
+                        if(mod == 1){
+                            cursor = 0;
+                            
+                        }
+                        if(mod == 2){
+                            cursor = 1;
+                            
+                        }
 
 
                     }
                     if(possLet.size() == 4){
-                        
-                        if(cursor == 4){
-                            cursor = 0;
+                        int mod = (nums.get(xx).length() % 4);
+                        if(mod == 0){
+                            cursor = 3;
+                            
                         }
-                            cursor = cursor + 1;
+                        if(mod == 1){
+                            cursor = 0;
+                            
+                        }
+                        if(mod == 2){
+                            cursor = 1;
+                            
+                        }if(mod == 3){
+                            cursor = 2;
+                        }
 
                             
                             
